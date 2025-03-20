@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 1rem;
+}
+
+fieldset {
+	margin: 10px 0;
+	padding: 10px;
+	border: none;
+}
+
+fieldset label {
+	width: 100%;
+	padding-bottom: 0.3rem;
+}
+
+button {
+	padding: 0.3rem;
+}
