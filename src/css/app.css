@@ -22,3 +22,32 @@ fieldset label {
 button {
 	padding: 0.3rem;
 }
+
+.alert {
+	width: 100%;
+	display: block;
+	background-color: lightblue;
+	padding: 0.4rem;
+	font-size: 1rem;
+	text-align: left;
+	color: #000;
+	transition: all linear 0.5s;
+	animation: view 0.5s;
+}
+
+@keyframes view {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.alert.alert-success {
+	background-color: lightgreen;
+}
+
+.alert.alert-reset {
+	background-color: lightcoral;
+}

@@ -24,6 +24,8 @@ document.getElementById('save').addEventListener('click', () => {
 			console.log('Retrieved');
 		}
 	});
+
+	showAlert('Data saved successfully', 'success');
 });
 
 //on window re-load, check if the local storage has any data and set the input fields
@@ -43,4 +45,15 @@ document.getElementById('reset').addEventListener('click', () => {
 		input.value = '';
 	});
 	//console.log('Cleared');
+	showAlert('Data cleared!!', 'reset');
 });
+
+const showAlert = (message, className) => {
+	const div = document.createElement('div');
+	div.className = `alert alert-${className}`;
+	div.appendChild(document.createTextNode(message));
+	const container = document.querySelector('.container');
+	const form = document.querySelector('form');
+	container.insertBefore(div, form);
+	setTimeout(() => document.querySelector('.alert').remove(), 3000);
+};
